@@ -4,7 +4,7 @@ public class Auto {
 	
 	public String modelo;
 	public int precio;
-	public Asiento [] asientos= new Asiento[7];
+	public Asiento [] asientos;
 	public String marca;
 	public Motor motor;
 	public int registro;
