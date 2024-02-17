@@ -4,7 +4,7 @@ public class Auto {
 	
 	public String modelo = null;
 	public int precio = 0;
-	public Asiento [] asientos= new Asiento[5];
+	public Asiento [] asientos= new Asiento[Asiento.getCantidad()];
 	public String marca = null;
 	public Motor motor = null;
 	public int registro = 0;
