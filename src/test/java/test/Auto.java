@@ -12,7 +12,13 @@ public class Auto {
 	
 	public int cantidadAsientos() {
 		
-		return this.asientos.length;
+		int i=0;
+        for (int j = 0;j<asientos.length;j++) {
+            if( asientos[j] instanceof Asiento  ) {
+                i++;
+            }
+        }
+        return i;
 	}
 	
 	public String verificarIntegridad() {
@@ -20,16 +26,20 @@ public class Auto {
 		boolean veracidad=false;
 		for(int i=0; i<this.asientos.length; i++) {
 			
-			if (this.registro==this.motor.registro && this.registro==this.asientos[i].registro) {
-				
-				veracidad = true;
-			}
 			
-			else {
+			if (asientos[i] instanceof Asiento) {
+			
+				if (this.registro==this.motor.registro && this.registro==this.asientos[i].registro) {
+					
+					veracidad = true;
+				}
 				
-				veracidad = false;
-				break;
-			}
+				else {
+					
+					veracidad = false;
+					break;
+				}
+			}	
 		}
 		
 		if (veracidad==true) {
